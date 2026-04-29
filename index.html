@@ -6,80 +6,44 @@
 <title>MonGlobal Certification LLC</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-/* Header */
+body { margin:0; font-family:Arial; }
 header {
-  background: #0b3d91;
-  color: white;
-  padding: 15px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background:#0b3d91; color:white;
+  padding:15px 50px;
+  display:flex; justify-content:space-between;
 }
-header nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-}
+nav a { color:white; margin:0 10px; text-decoration:none; }
 
-/* Hero */
 .hero {
-  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center/cover;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
-}
-.hero h1 {
-  font-size: 40px;
-}
-.btn {
-  padding: 12px 25px;
-  margin: 10px;
-  border: none;
-  cursor: pointer;
-}
-.btn-primary {
-  background: #00a651;
-  color: white;
-}
-.btn-outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
+  background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
+  color:white; text-align:center; padding:100px;
 }
 
-/* Section */
-.section {
-  padding: 60px 50px;
-  text-align: center;
-}
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.card {
-  width: 250px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+.section { padding:50px; text-align:center; }
+
+.cards { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.card { width:250px; border:1px solid #ddd; padding:20px; }
+
+input, textarea {
+  width:100%; max-width:400px;
+  margin:10px auto; display:block;
+  padding:10px;
 }
 
-/* Footer */
+button {
+  background:#00a651;
+  color:white;
+  padding:10px 20px;
+  border:none;
+}
+
 footer {
-  background: #0b3d91;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background:#0b3d91;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
-
 </head>
 
 <body>
@@ -88,7 +52,6 @@ footer {
   <h2>MonGlobalCertificationLLC</h2>
   <nav>
     <a href="#">Нүүр</a>
-    <a href="#">Бидний тухай</a>
     <a href="#">Үйлчилгээ</a>
     <a href="#">Холбоо барих</a>
   </nav>
@@ -97,40 +60,15 @@ footer {
 <section class="hero">
   <h1>Олон улсын стандартын баталгаажуулалт</h1>
   <p>ISO стандартын дагуу байгууллагын итгэлцлийг нэмэгдүүлнэ</p>
-  <button class="btn btn-primary">Үйлчилгээ авах</button>
-  <button class="btn btn-outline">Дэлгэрэнгүй</button>
-</section>
-
-<section class="section">
-  <h2>Бид хэн бэ?</h2>
-  <p>MonGlobal Certification LLC нь ISO стандартын баталгаажуулалт, аудит, сургалт хийдэг.</p>
 </section>
 
 <section class="section">
   <h2>Манай үйлчилгээ</h2>
   <div class="cards">
-    <div class="card">
-      <h3>ISO баталгаажуулалт</h3>
-      <p>9001, 14001, 45001 стандарт</p>
-    </div>
-    <div class="card">
-      <h3>Аудит</h3>
-      <p>Дотоод болон гадаад аудит</p>
-    </div>
-    <div class="card">
-      <h3>Сургалт</h3>
-      <p>ISO сургалт</p>
-    </div>
-    <div class="card">
-      <h3>Зөвлөх</h3>
-      <p>Систем нэвтрүүлэлт</p>
-    </div>
+    <div class="card"><h3>ISO</h3></div>
+    <div class="card"><h3>Аудит</h3></div>
+    <div class="card"><h3>Сургалт</h3></div>
   </div>
-</section>
-
-<section class="section">
-  <h2>Стандартууд</h2>
-  <p>ISO 9001 | ISO 14001 | ISO 45001 | ISO 22000</p>
 </section>
 
 <section class="section">
@@ -139,11 +77,9 @@ footer {
   <p>📧 info@monglobal.mn</p>
 </section>
 
-<footer>
-  <p>© 2026 MonGlobal Certification LLC</p>
-</footer>
+<!-- FORM -->
 <section class="section">
-  <h2>Холбоо барих</h2>
+  <h2>Мессеж илгээх</h2>
 
   <form action="https://formspree.io/f/xlgaqyyp" method="POST">
     <input type="text" name="name" placeholder="Нэр" required>
@@ -153,5 +89,10 @@ footer {
   </form>
 
 </section>
+
+<footer>
+  <p>© 2026 MonGlobal Certification LLC</p>
+</footer>
+
 </body>
 </html>
