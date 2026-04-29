@@ -6,42 +6,89 @@
 <title>MonGlobal Certification LLC</title>
 
 <style>
-body { margin:0; font-family:Arial; }
-header {
-  background:#0b3d91; color:white;
-  padding:15px 50px;
-  display:flex; justify-content:space-between;
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#102033;background:#f6f9fc}
+html{scroll-behavior:smooth}
+
+header{
+  position:sticky;top:0;z-index:100;
+  background:white;padding:18px 8%;
+  display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.08)
 }
-nav a { color:white; margin:0 10px; text-decoration:none; }
+.logo{font-size:24px;font-weight:800;color:#0b3d91}
+.logo span{color:#00a651}
+nav a{margin-left:22px;text-decoration:none;color:#102033;font-weight:600}
+nav a:hover{color:#00a651}
 
-.hero {
-  background:url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
-  color:white; text-align:center; padding:100px;
+.hero{
+  min-height:90vh;
+  background:linear-gradient(120deg,rgba(5,26,68,.88),rgba(0,120,88,.65)),
+  url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab') center/cover;
+  color:white;display:flex;align-items:center;padding:80px 8%
+}
+.hero div{max-width:760px}
+.hero h1{font-size:56px;line-height:1.1;margin:15px 0}
+.hero p{font-size:20px;line-height:1.6}
+.tag{letter-spacing:4px;color:#8fffc1;font-weight:bold}
+.btn{
+  display:inline-block;margin-top:25px;padding:15px 32px;
+  background:#00a651;color:white;text-decoration:none;border-radius:40px;font-weight:bold
 }
 
-.section { padding:50px; text-align:center; }
+.section{padding:85px 8%;text-align:center}
+.section h2{font-size:38px;color:#0b3d91;margin-bottom:15px}
+.section p{max-width:850px;margin:0 auto 25px;line-height:1.8;font-size:18px}
 
-.cards { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
-.card { width:250px; border:1px solid #ddd; padding:20px; }
+.cards{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:24px;margin-top:35px
+}
+.card{
+  background:white;padding:30px;border-radius:22px;
+  box-shadow:0 18px 45px rgba(0,0,0,.08);
+  transition:.3s
+}
+.card:hover{transform:translateY(-8px)}
+.card h3{color:#0b3d91}
 
-input, textarea {
-  width:100%; max-width:400px;
-  margin:10px auto; display:block;
-  padding:10px;
+.dark{background:#071f45;color:white}
+.dark h2{color:white}
+.dark .card{color:#102033}
+
+.standards{
+  display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:30px
+}
+.standards span{
+  background:white;padding:16px 28px;border-radius:50px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  font-weight:bold;color:#0b3d91
 }
 
-button {
-  background:#00a651;
-  color:white;
-  padding:10px 20px;
-  border:none;
+.contact-box{
+  display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1050px;margin:auto;text-align:left
+}
+.contact-info,.form-box{
+  background:white;padding:32px;border-radius:24px;
+  box-shadow:0 18px 45px rgba(0,0,0,.08)
+}
+input,textarea,select{
+  width:100%;padding:15px;margin:9px 0;border:1px solid #d8e2ef;border-radius:12px;font-size:16px
+}
+textarea{min-height:130px}
+button{
+  width:100%;padding:15px;background:#00a651;color:white;border:none;border-radius:14px;
+  font-size:17px;font-weight:bold;cursor:pointer
 }
 
-footer {
-  background:#0b3d91;
-  color:white;
-  text-align:center;
-  padding:20px;
+footer{background:#071f45;color:white;text-align:center;padding:28px}
+
+@media(max-width:900px){
+  header{display:block;text-align:center}
+  nav a{display:inline-block;margin:10px}
+  .hero h1{font-size:38px}
+  .cards{grid-template-columns:1fr}
+  .contact-box{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -49,49 +96,93 @@ footer {
 <body>
 
 <header>
-  <h2>MonGlobalCertificationLLC</h2>
+  <div class="logo">Mon<span>Global</span> Certification</div>
   <nav>
-    <a href="#">Нүүр</a>
-    <a href="#">Үйлчилгээ</a>
-    <a href="#">Холбоо барих</a>
+    <a href="#home">Нүүр</a>
+    <a href="#about">Бидний тухай</a>
+    <a href="#services">Үйлчилгээ</a>
+    <a href="#standards">Стандарт</a>
+    <a href="#contact">Холбоо барих</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h1>Олон улсын стандартын баталгаажуулалт</h1>
-  <p>ISO стандартын дагуу байгууллагын итгэлцлийг нэмэгдүүлнэ</p>
-</section>
-
-<section class="section">
-  <h2>Манай үйлчилгээ</h2>
-  <div class="cards">
-    <div class="card"><h3>ISO</h3></div>
-    <div class="card"><h3>Аудит</h3></div>
-    <div class="card"><h3>Сургалт</h3></div>
+<section id="home" class="hero">
+  <div>
+    <p class="tag">CERTIFICATION • AUDIT • TRAINING</p>
+    <h1>Олон улсын стандартын баталгаажуулалтын мэргэжлийн шийдэл</h1>
+    <p>Байгууллагын чанар, аюулгүй байдал, итгэлцлийг олон улсын ISO стандартын дагуу баталгаажуулна.</p>
+    <a class="btn" href="#contact">Үйлчилгээ авах</a>
   </div>
 </section>
 
-<section class="section">
-  <h2>Холбоо барих</h2>
-  <p>📞 99969723</p>
-  <p>📧 Monglobalpro.info@gmail.com</p>
+<section id="about" class="section">
+  <h2>Бидний тухай</h2>
+  <p>
+    MonGlobal Certification LLC нь байгууллагын менежментийн тогтолцоо, ISO стандарт,
+    аудит, сургалт, зөвлөх үйлчилгээний чиглэлээр ажилладаг мэргэжлийн байгууллага юм.
+  </p>
+  <div class="cards">
+    <div class="card"><h3>Итгэлцэл</h3><p>Хараат бус, мэргэжлийн үнэлгээ.</p></div>
+    <div class="card"><h3>Чанар</h3><p>Олон улсын стандартын шаардлага.</p></div>
+    <div class="card"><h3>Туршлага</h3><p>Салбар бүрт тохирсон шийдэл.</p></div>
+    <div class="card"><h3>Дэмжлэг</h3><p>Үйлчлүүлэгчидтэй урт хугацаанд хамтрах.</p></div>
+  </div>
 </section>
 
-<!-- FORM -->
-<section class="section">
-  <h2>Мессеж илгээх</h2>
+<section id="services" class="section dark">
+  <h2>Манай үйлчилгээ</h2>
+  <p>Байгууллагын үйл ажиллагаанд тохирсон баталгаажуулалт, аудит, сургалтын цогц үйлчилгээ.</p>
+  <div class="cards">
+    <div class="card"><h3>ISO баталгаажуулалт</h3><p>ISO 9001, ISO 14001, ISO 45001, ISO 22000.</p></div>
+    <div class="card"><h3>Аудит</h3><p>Дотоод аудит, хөндлөнгийн аудит, үнэлгээ.</p></div>
+    <div class="card"><h3>Сургалт</h3><p>ISO стандартын ойлголт, хэрэгжилт, аудитын сургалт.</p></div>
+    <div class="card"><h3>Зөвлөх үйлчилгээ</h3><p>Менежментийн тогтолцоо нэвтрүүлэх зөвлөмж.</p></div>
+  </div>
+</section>
 
-  <form action="https://formspree.io/f/xlgaqyyp" method="POST">
-    <input type="text" name="name" placeholder="Нэр" required>
-    <input type="email" name="email" placeholder="Имэйл" required>
-    <textarea name="message" placeholder="Мессеж" required></textarea>
-    <button type="submit">Илгээх</button>
-  </form>
+<section id="standards" class="section">
+  <h2>Стандартууд</h2>
+  <p>Бид дараах олон улсын стандартуудын хүрээнд үйлчилгээ үзүүлнэ.</p>
+  <div class="standards">
+    <span>ISO 9001</span>
+    <span>ISO 14001</span>
+    <span>ISO 45001</span>
+    <span>ISO 22000</span>
+    <span>ISO 27001</span>
+  </div>
+</section>
 
+<section id="contact" class="section">
+  <h2>Холбоо барих</h2>
+  <div class="contact-box">
+    <div class="contact-info">
+      <h3>MonGlobal Certification LLC</h3>
+      <p>📞 Утас: 99969723</p>
+      <p>📧 Имэйл: info@monglobal.mn</p>
+      <p>📍 Хаяг: Улаанбаатар, Монгол</p>
+      <p>Та үйлчилгээний хүсэлтээ илгээвэл бид тантай эргэн холбогдоно.</p>
+    </div>
+
+    <div class="form-box">
+      <form action="https://formspree.io/f/xlgaqyyp" method="POST">
+        <input type="text" name="name" placeholder="Нэр" required>
+        <input type="email" name="email" placeholder="Имэйл" required>
+        <input type="text" name="phone" placeholder="Утас">
+        <select name="service">
+          <option>ISO баталгаажуулалт</option>
+          <option>Аудит</option>
+          <option>Сургалт</option>
+          <option>Зөвлөх үйлчилгээ</option>
+        </select>
+        <textarea name="message" placeholder="Мессеж" required></textarea>
+        <button type="submit">Илгээх</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 MonGlobal Certification LLC</p>
+  <p>© 2026 MonGlobal Certification LLC. All rights reserved.</p>
 </footer>
 
 </body>
