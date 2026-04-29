@@ -10,88 +10,134 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:'Poppins',sans-serif;color:#102033;background:#f6f9fc}
 html{scroll-behavior:smooth}
-
-header{
-  position:sticky;top:0;z-index:100;
-  background:white;padding:18px 8%;
-  display:flex;justify-content:space-between;align-items:center;
-  box-shadow:0 10px 30px rgba(0,0,0,.08)
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f6f9fc;
+  color:#102033;
 }
-.logo{font-size:24px;font-weight:800;color:#0b3d91}
-.logo span{color:#00a651}
-nav a{margin-left:22px;text-decoration:none;color:#102033;font-weight:600}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:white;
+  padding:16px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.logo img{height:45px}
+
+/* NAV */
+nav a{
+  margin-left:22px;
+  text-decoration:none;
+  color:#102033;
+  font-weight:600;
+}
 nav a:hover{color:#00a651}
 
+/* HERO */
 .hero{
   min-height:90vh;
-  background:linear-gradient(120deg,rgba(5,26,68,.88),rgba(0,120,88,.65)),
+  background:linear-gradient(120deg,rgba(5,26,68,.9),rgba(0,120,88,.65)),
   url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab') center/cover;
-  color:white;display:flex;align-items:center;padding:80px 8%
+  color:white;
+  display:flex;
+  align-items:center;
+  padding:90px 8%;
 }
-.hero div{max-width:760px;animation:fadeUp 1.2s ease}
-.hero h1{font-size:56px;line-height:1.1;margin:15px 0}
-.hero p{font-size:20px}
+.hero-content{max-width:800px}
+.hero h1{font-size:50px}
 .tag{letter-spacing:4px;color:#8fffc1;font-weight:bold}
 
 .btn{
-  display:inline-block;margin-top:25px;padding:15px 32px;
+  display:inline-block;
+  margin-top:25px;
+  padding:15px 30px;
   background:linear-gradient(135deg,#00a651,#0b3d91);
-  color:white;text-decoration:none;border-radius:40px;font-weight:bold
+  color:white;
+  text-decoration:none;
+  border-radius:40px;
 }
 
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(40px);}
-  to{opacity:1; transform:translateY(0);}
+/* SECTION */
+.section{
+  padding:80px 8%;
+  text-align:center;
 }
+.section h2{font-size:36px;color:#0b3d91}
 
-.section{padding:85px 8%;text-align:center}
-.section h2{font-size:38px;color:#0b3d91}
-.section p{max-width:850px;margin:auto;line-height:1.8}
-
+/* CARDS */
 .cards{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:24px;margin-top:35px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:30px;
 }
-
 .card{
-  background:white;padding:30px;border-radius:22px;
-  box-shadow:0 25px 60px rgba(0,0,0,.08);
-  transition:.3s
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
 }
-.card:hover{transform:translateY(-10px) scale(1.02)}
+.card i{font-size:30px;color:#00a651}
 
+/* DARK */
 .dark{background:#071f45;color:white}
 .dark h2{color:white}
 
-.standards{
-  display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:30px
-}
-.standards span{
-  background:white;padding:16px 28px;border-radius:50px;
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
-  font-weight:bold;color:#0b3d91
+/* CONTACT */
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  max-width:1000px;
+  margin:auto;
+  text-align:left;
 }
 
-.contact-box{
-  display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1050px;margin:auto;text-align:left
-}
 .contact-info,.form-box{
-  background:white;padding:32px;border-radius:24px;
-  box-shadow:0 18px 45px rgba(0,0,0,.08)
+  background:white;
+  padding:30px;
+  border-radius:20px;
+}
+
+.info-item{
+  display:flex;
+  gap:10px;
+  margin:10px 0;
 }
 
 input,textarea,select{
-  width:100%;padding:15px;margin:9px 0;border-radius:12px;border:1px solid #ddd
-}
-button{
-  width:100%;padding:15px;
-  background:linear-gradient(135deg,#00a651,#0b3d91);
-  color:white;border:none;border-radius:14px;font-weight:bold
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
 }
 
-footer{background:#071f45;color:white;text-align:center;padding:28px}
+button{
+  width:100%;
+  padding:12px;
+  background:#00a651;
+  color:white;
+  border:none;
+  border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+  background:#071f45;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 
 @media(max-width:900px){
   .cards{grid-template-columns:1fr}
@@ -102,9 +148,9 @@ footer{background:#071f45;color:white;text-align:center;padding:28px}
 
 <body>
 
-  <header>
+<header>
   <a href="#home" class="logo">
-    <img src="logo.jpg" alt="MonGlobal Logo">
+    <img src="logo.jpg">
   </a>
   <nav>
     <a href="#home">Нүүр</a>
@@ -115,38 +161,44 @@ footer{background:#071f45;color:white;text-align:center;padding:28px}
 </header>
 
 <section id="home" class="hero">
-  <div>
+  <div class="hero-content">
     <p class="tag">CERTIFICATION • AUDIT • TRAINING</p>
     <h1>Олон улсын стандартын баталгаажуулалт</h1>
-    <p>ISO стандартын дагуу мэргэжлийн үйлчилгээ</p>
     <a class="btn" href="#contact">Үйлчилгээ авах</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>Бидний тухай</h2>
+  <p>ISO стандарт, аудит, сургалтын чиглэлээр үйлчилгээ үзүүлнэ.</p>
+
+  <div class="cards">
+    <div class="card"><i class="fa-solid fa-shield"></i><h3>Итгэлцэл</h3></div>
+    <div class="card"><i class="fa-solid fa-award"></i><h3>Чанар</h3></div>
+    <div class="card"><i class="fa-solid fa-handshake"></i><h3>Туршлага</h3></div>
   </div>
 </section>
 
 <section id="services" class="section dark">
   <h2>Манай үйлчилгээ</h2>
   <div class="cards">
-    <div class="card">
-      <h3><i class="fa-solid fa-certificate"></i> ISO баталгаажуулалт</h3>
-      <p>ISO стандартууд</p>
-    </div>
-    <div class="card">
-      <h3><i class="fa-solid fa-chart-line"></i> Аудит</h3>
-      <p>Мэргэжлийн аудит</p>
-    </div>
-    <div class="card">
-      <h3><i class="fa-solid fa-chalkboard"></i> Сургалт</h3>
-      <p>ISO сургалт</p>
-    </div>
+    <div class="card"><i class="fa-solid fa-certificate"></i><h3>ISO баталгаажуулалт</h3></div>
+    <div class="card"><i class="fa-solid fa-chart-line"></i><h3>Аудит</h3></div>
+    <div class="card"><i class="fa-solid fa-chalkboard"></i><h3>Сургалт</h3></div>
   </div>
 </section>
 
 <section id="contact" class="section">
   <h2>Холбоо барих</h2>
+
   <div class="contact-box">
     <div class="contact-info">
-      <p>📞 99969723</p>
-      <p>📧 monglobalpro.info@gmail.com</p>
+      <h3>MonGlobal Certification LLC</h3>
+
+      <div class="info-item">📞 99969723</div>
+      <div class="info-item">📧 monglobalpro.info@gmail.com</div>
+      <div class="info-item">📍 Улаанбаатар хот</div>
+      <div class="info-item">🕘 Даваа–Баасан 09:00–18:00</div>
     </div>
 
     <div class="form-box">
@@ -161,14 +213,8 @@ footer{background:#071f45;color:white;text-align:center;padding:28px}
 </section>
 
 <footer>
-  <p>© 2026 MonGlobal Certification LLC</p>
+  © 2026 MonGlobal Certification LLC
 </footer>
-
-<script>
-document.querySelector("form").addEventListener("submit", function(){
-  alert("Таны хүсэлт амжилттай илгээгдлээ!");
-});
-</script>
 
 </body>
 </html>
